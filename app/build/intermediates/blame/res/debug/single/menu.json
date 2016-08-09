@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/squiggie/Documents/source/BottomBar/app/build/intermediates/res/merged/debug/menu/bottombar_menu.xml",
+        "source": "/Users/squiggie/Documents/source/BottomBar/app/src/main/res/menu/bottombar_menu.xml"
+    },
+    {
+        "merged": "/Users/squiggie/Documents/source/BottomBar/app/build/intermediates/res/merged/debug/menu/bottombar_menu_three_items.xml",
+        "source": "/Users/squiggie/Documents/source/BottomBar/app/src/main/res/menu/bottombar_menu_three_items.xml"
+    }
+]

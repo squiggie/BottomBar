@@ -1,0 +1,148 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:2:1-30:12
+	package
+		ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:3:5-43
+		INJECTED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml
+application
+ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:5:5-28:19
+MERGED from [com.android.support:appcompat-v7:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:22:5-20
+	android:label
+		ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:8:9-41
+	android:supportsRtl
+		ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:9:9-35
+	android:allowBackup
+		ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:6:9-35
+	android:icon
+		ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:7:9-43
+	android:theme
+		ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:10:9-40
+activity#com.example.bottombar.sample.MainActivity
+ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:11:9-19:20
+	android:launchMode
+		ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:13:13-48
+	android:name
+		ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:12:13-41
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:14:13-18:29
+action#android.intent.action.MAIN
+ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:15:17-69
+	android:name
+		ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:15:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:17:17-77
+	android:name
+		ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:17:27-74
+activity#com.example.bottombar.sample.ThreeTabsActivity
+ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:20:9-55
+	android:name
+		ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:20:19-52
+activity#com.example.bottombar.sample.FiveColorChangingTabsActivity
+ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:21:9-67
+	android:name
+		ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:21:19-64
+activity#com.example.bottombar.sample.ThreeTabsQRActivity
+ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:22:9-57
+	android:name
+		ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:22:19-54
+activity#com.example.bottombar.sample.BadgeActivity
+ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:23:9-51
+	android:name
+		ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:23:19-48
+activity#com.example.bottombar.sample.CustomColorActivity
+ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:24:9-27:68
+	android:label
+		ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:26:13-64
+	android:theme
+		ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:27:13-56
+	android:name
+		ADDED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml:25:13-48
+uses-sdk
+INJECTED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.github.squiggie:bottom-bar:1.4.0.1] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.github.squiggie/bottom-bar/1.4.0.1/AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:appcompat-v7:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.3.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/design/23.3.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.3.0/AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.3.0/AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.3.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.3.0/AndroidManifest.xml:20:5-43
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:23.3.0] /Users/squiggie/Documents/source/BottomBar/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/squiggie/Documents/source/BottomBar/app/src/main/AndroidManifest.xml
