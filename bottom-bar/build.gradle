@@ -10,8 +10,8 @@ ext {
 
     libraryDescription = 'A custom view component that mimics the Material Design "Bottom navigation" pattern.'
 
-    siteUrl = 'https://github.com/roughike/BottomBar'
-    gitUrl = 'https://github.com/roughike/BottomBar.git'
+    siteUrl = 'https://github.com/squiggie/BottomBar'
+    gitUrl = 'https://github.com/squiggie/BottomBar.git'
 
     libraryVersion = '1.4.0.1'
 
@@ -46,8 +46,6 @@ apply plugin: 'com.github.dcendents.android-maven'
 
 group = publishedGroupId                               // Maven Group ID for the artifact
 
-apply plugin: 'com.jfrog.bintray'
-
 version = libraryVersion
 
 if (project.hasProperty("android")) { // Android libraries
@@ -75,33 +73,4 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 artifacts {
     archives javadocJar
     archives sourcesJar
-}
-
-// Bintray
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
-bintray {
-    user = properties.getProperty("bintray.user")
-    key = properties.getProperty("bintray.apikey")
-
-    configurations = ['archives']
-    pkg {
-        repo = bintrayRepo
-        name = bintrayName
-        desc = libraryDescription
-        websiteUrl = siteUrl
-        vcsUrl = gitUrl
-        licenses = allLicenses
-        publish = true
-        publicDownloadNumbers = true
-        version {
-            desc = libraryDescription
-            gpg {
-                sign = true //Determines whether to GPG sign the files. The default is false
-                passphrase = properties.getProperty("bintray.gpg.password")
-                //Optional. The passphrase for GPG signing'
-            }
-        }
-    }
 }
