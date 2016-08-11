@@ -131,7 +131,7 @@ public class BottomBar extends RelativeLayout implements View.OnClickListener, V
     // For fragment state restoration
     private boolean mShouldUpdateFragmentInitially;
 
-    private int mMaxFixedTabCount = 3;
+    private int mMaxFixedTabCount = 2;
 
     /**
      * Bind the BottomBar to your Activity, and inflate your layout here.
