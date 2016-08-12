@@ -963,6 +963,7 @@ public class BottomBar extends RelativeLayout implements View.OnClickListener, V
         mTabAlpha = alpha;
         mWhiteColor = activeColor;
         mPrimaryColor = backgroundColor;
+        mInActiveColor = ContextCompat.getColor(context, R.color.bb_inActiveBottomBarItemColor);
         init(context, null, 0, 0);
     }
 
