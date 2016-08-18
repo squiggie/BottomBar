@@ -118,7 +118,7 @@ public class BottomBar extends RelativeLayout implements View.OnClickListener, V
     private boolean mIgnoreNightMode;
     private boolean mIgnoreShiftingResize;
     private boolean mIgnoreScalingResize;
-
+    private boolean mAlwaysShowTitles = false;
     private int mCustomActiveTabColor;
 
     private boolean mDrawBehindNavBar = true;
@@ -135,7 +135,7 @@ public class BottomBar extends RelativeLayout implements View.OnClickListener, V
 
     /**
      * Bind the BottomBar to your Activity, and inflate your layout here.
-     * 
+     *
      * Remember to also call {@link #onSaveInstanceState(Bundle)} inside
      * of your {@link Activity#onSaveInstanceState(Bundle)} to restore the state.
      *
@@ -179,7 +179,7 @@ public class BottomBar extends RelativeLayout implements View.OnClickListener, V
      * Bind the BottomBar to the specified View's parent, and inflate
      * your layout there. Useful when the BottomBar overlaps some content
      * that shouldn't be overlapped.
-     * 
+     *
      * Remember to also call {@link #onRestoreInstanceState(Bundle)} inside
      * of your {@link Activity#onSaveInstanceState(Bundle)} to restore the state.
      *
@@ -218,7 +218,7 @@ public class BottomBar extends RelativeLayout implements View.OnClickListener, V
     /**
      * Adds the BottomBar inside of your CoordinatorLayout and shows / hides
      * it according to scroll state changes.
-     * 
+     *
      * Remember to also call {@link #onRestoreInstanceState(Bundle)} inside
      * of your {@link Activity#onSaveInstanceState(Bundle)} to restore the state.
      *
@@ -278,11 +278,11 @@ public class BottomBar extends RelativeLayout implements View.OnClickListener, V
 
     /**
      * Deprecated.
-     * 
+     *
      * Use either {@link #setItems(BottomBarTab...)} or
      * {@link #setItemsFromMenu(int, OnMenuTabClickListener)} and add a listener using
      * {@link #setOnTabClickListener(OnTabClickListener)} to handle tab changes by yourself.
-     * 
+     *
      * Set tabs and fragments for this BottomBar. When setting more than 3 items,
      * only the icons will show by default, but the selected item
      * will have the text visible.
@@ -419,7 +419,7 @@ public class BottomBar extends RelativeLayout implements View.OnClickListener, V
      *
      * @param position the position to select.
      */
-    public void selectTabAtPosition(int position, boolean animate) {
+    public void selectTabAtPosition(int position, boolean animate, boolean notifyListeners) {
         if (mItems == null || mItems.length == 0) {
             throw new UnsupportedOperationException("Can't select tab at " +
                     "position " + position + ". This BottomBar has no items set yet.");
@@ -434,7 +434,7 @@ public class BottomBar extends RelativeLayout implements View.OnClickListener, V
         unselectTab(oldTab, animate);
         selectTab(newTab, animate);
 
-        updateSelectedTab(position);
+        updateSelectedTab(position, notifyListeners);
         shiftingMagic(oldTab, newTab, animate);
     }
 
@@ -444,7 +444,7 @@ public class BottomBar extends RelativeLayout implements View.OnClickListener, V
      *
      * @param defaultTabPosition the default tab position.
      */
-    public void setDefaultTabPosition(int defaultTabPosition) {
+    public void setDefaultTabPosition(int defaultTabPosition, boolean notifyListeners) {
         if (mIsComingFromRestoredState) return;
 
         if (mItems == null) {
@@ -456,7 +456,7 @@ public class BottomBar extends RelativeLayout implements View.OnClickListener, V
                     defaultTabPosition + ". This BottomBar has no items at that position.");
         }
 
-        selectTabAtPosition(defaultTabPosition, false);
+        selectTabAtPosition(defaultTabPosition, false, notifyListeners);
     }
 
     /**
@@ -485,7 +485,7 @@ public class BottomBar extends RelativeLayout implements View.OnClickListener, V
     /**
      * Set the maximum number of tabs, after which the tabs should be shifting
      * ones with a background color.
-     * 
+     *
      * NOTE: You must call this method before setting any items.
      *
      * @param count maximum number of fixed tabs.
@@ -605,7 +605,7 @@ public class BottomBar extends RelativeLayout implements View.OnClickListener, V
 
     /**
      * Use dark theme instead of the light one.
-     * 
+     *
      * NOTE: You might want to change your active tab color to something else
      * using {@link #setActiveTabColor(int)}, as the default primary color might
      * not have enough contrast for the dark background.
@@ -647,7 +647,7 @@ public class BottomBar extends RelativeLayout implements View.OnClickListener, V
     /**
      * Set a custom color for an active tab when there's three
      * or less items.
-     * 
+     *
      * NOTE: This value is ignored on mobile devices if you have more than
      * three items.
      *
@@ -660,7 +660,7 @@ public class BottomBar extends RelativeLayout implements View.OnClickListener, V
     /**
      * Set a custom color for an active tab when there's three
      * or less items.
-     * 
+     *
      * NOTE: This value is ignored if you have more than three items.
      *
      * @param activeTabColor a hex color used for active tabs, such as 0xFF00FF00.
@@ -669,13 +669,13 @@ public class BottomBar extends RelativeLayout implements View.OnClickListener, V
         mCustomActiveTabColor = activeTabColor;
 
         if (mItems != null && mItems.length > 0) {
-            selectTabAtPosition(mCurrentTabPosition, false);
+            selectTabAtPosition(mCurrentTabPosition, false,true);
         }
     }
 
     /**
      * Set a custom color for inactive icons in fixed mode.
-     * 
+     *
      * NOTE: This value is ignored if not in fixed mode.
      *
      * @param iconColor a hex color used for icons, such as 0xFF00FF00.
@@ -692,7 +692,7 @@ public class BottomBar extends RelativeLayout implements View.OnClickListener, V
 
     /**
      * Set a custom color for icons in shifting mode.
-     * 
+     *
      * NOTE: This value is ignored in fixed mode.
      *
      * @param iconColor a hex color used for icons, such as 0xFF00FF00.
@@ -919,6 +919,10 @@ public class BottomBar extends RelativeLayout implements View.OnClickListener, V
         listener.onSizeReady(sizeCandidate);
     }
 
+    public void alwaysShowTitles(Boolean showTitles) {
+        this.mAlwaysShowTitles = showTitles;
+    }
+
     /**
      * Get the actual BottomBar that has the tabs inside it for whatever what you may want
      * to do with it.
@@ -1005,7 +1009,7 @@ public class BottomBar extends RelativeLayout implements View.OnClickListener, V
         //mInActiveColor = Color.parseColor("#ffffff");
 
         mScreenWidth = MiscUtils.getScreenWidth(mContext);
-        mTenDp = MiscUtils.dpToPixel(mContext, 10);
+        mTenDp = MiscUtils.dpToPixel(mContext, 20);
         mSixteenDp = MiscUtils.dpToPixel(mContext, 16);
         mSixDp = MiscUtils.dpToPixel(mContext, 6);
         mEightDp = MiscUtils.dpToPixel(mContext, 8);
@@ -1159,7 +1163,7 @@ public class BottomBar extends RelativeLayout implements View.OnClickListener, V
 
             shiftingMagic(oldTab, v, true);
         }
-        updateSelectedTab(findItemPosition(v));
+        updateSelectedTab(findItemPosition(v),true);
     }
 
     private void shiftingMagic(View oldTab, View newTab, boolean animate) {
@@ -1184,30 +1188,34 @@ public class BottomBar extends RelativeLayout implements View.OnClickListener, V
         }
     }
 
-    private void updateSelectedTab(int newPosition) {
+    private void updateSelectedTab(int newPosition, boolean notifyListeners) {
         final boolean notifyMenuListener = mMenuListener != null && mItems instanceof BottomBarTab[];
         final boolean notifyRegularListener = mListener != null;
 
         if (newPosition != mCurrentTabPosition) {
             handleBadgeVisibility(mCurrentTabPosition, newPosition);
             mCurrentTabPosition = newPosition;
+            if (notifyListeners){
+                if (notifyRegularListener) {
+                    notifyRegularListener(mListener, false, mCurrentTabPosition);
+                }
 
-            if (notifyRegularListener) {
-                notifyRegularListener(mListener, false, mCurrentTabPosition);
+                if (notifyMenuListener) {
+                    notifyMenuListener(mMenuListener, false, ((BottomBarTab) mItems[mCurrentTabPosition]).id);
+                }
+
+                updateCurrentFragment();
             }
-
-            if (notifyMenuListener) {
-                notifyMenuListener(mMenuListener, false, ((BottomBarTab) mItems[mCurrentTabPosition]).id);
-            }
-
-            updateCurrentFragment();
         } else {
-            if (notifyRegularListener) {
-                notifyRegularListener(mListener, true, mCurrentTabPosition);
-            }
+            if (notifyListeners) {
 
-            if (notifyMenuListener) {
-                notifyMenuListener(mMenuListener, true, ((BottomBarTab) mItems[mCurrentTabPosition]).id);
+                if (notifyRegularListener) {
+                    notifyRegularListener(mListener, true, mCurrentTabPosition);
+                }
+
+                if (notifyMenuListener) {
+                    notifyMenuListener(mMenuListener, true, ((BottomBarTab) mItems[mCurrentTabPosition]).id);
+                }
             }
         }
     }
@@ -1510,17 +1518,18 @@ public class BottomBar extends RelativeLayout implements View.OnClickListener, V
         }
 
         if (animate) {
-            ViewPropertyAnimatorCompat titleAnimator = ViewCompat.animate(title)
-                    .setDuration(ANIMATION_DURATION)
-                    .scaleX(1)
-                    .scaleY(1);
+            if (!mAlwaysShowTitles) {
+                ViewPropertyAnimatorCompat titleAnimator = ViewCompat.animate(title)
+                        .setDuration(ANIMATION_DURATION)
+                        .scaleX(1)
+                        .scaleY(1);
 
-            if (mIsShiftingMode) {
-                titleAnimator.alpha(1.0f);
+                if (mIsShiftingMode) {
+                    titleAnimator.alpha(1.0f);
+                }
+
+                titleAnimator.start();
             }
-
-            titleAnimator.start();
-
             // We only want to animate the icon to avoid moving the title
             // Shifting or fixed the padding above icon is always 6dp
             MiscUtils.resizePaddingTop(icon, icon.getPaddingTop(), mSixDp, ANIMATION_DURATION);
@@ -1534,8 +1543,10 @@ public class BottomBar extends RelativeLayout implements View.OnClickListener, V
 
             handleBackgroundColorChange(tabPosition, tab);
         } else {
-            ViewCompat.setScaleX(title, 1);
-            ViewCompat.setScaleY(title, 1);
+            if (!mAlwaysShowTitles) {
+                ViewCompat.setScaleX(title, 1);
+                ViewCompat.setScaleY(title, 1);
+            }
             icon.setPadding(icon.getPaddingLeft(), mSixDp, icon.getPaddingRight(),
                 icon.getPaddingBottom());
 
@@ -1577,17 +1588,18 @@ public class BottomBar extends RelativeLayout implements View.OnClickListener, V
         int iconPaddingTop = mIsShiftingMode ? mSixteenDp : mEightDp;
 
         if (animate) {
-            ViewPropertyAnimatorCompat titleAnimator = ViewCompat.animate(title)
-                    .setDuration(ANIMATION_DURATION)
-                    .scaleX(scale)
-                    .scaleY(scale);
+            if (!mAlwaysShowTitles) {
+                ViewPropertyAnimatorCompat titleAnimator = ViewCompat.animate(title)
+                        .setDuration(ANIMATION_DURATION)
+                        .scaleX(scale)
+                        .scaleY(scale);
 
-            if (mIsShiftingMode) {
-                titleAnimator.alpha(0);
+                if (mIsShiftingMode) {
+                    titleAnimator.alpha(0);
+                }
+
+                titleAnimator.start();
             }
-
-            titleAnimator.start();
-
             MiscUtils.resizePaddingTop(icon, icon.getPaddingTop(), iconPaddingTop, ANIMATION_DURATION);
 
             if (mIsShiftingMode) {
@@ -1597,14 +1609,19 @@ public class BottomBar extends RelativeLayout implements View.OnClickListener, V
                         .start();
             }
         } else {
-            ViewCompat.setScaleX(title, scale);
-            ViewCompat.setScaleY(title, scale);
+            if (!mAlwaysShowTitles){
+                ViewCompat.setScaleX(title, scale);
+                ViewCompat.setScaleY(title, scale);
+            }
             icon.setPadding(icon.getPaddingLeft(), iconPaddingTop, icon.getPaddingRight(),
                 icon.getPaddingBottom());
 
             if (mIsShiftingMode) {
                 ViewCompat.setAlpha(icon, mTabAlpha);
-                ViewCompat.setAlpha(title, 0);
+                if (!mAlwaysShowTitles){
+                    ViewCompat.setAlpha(title, 0);
+                }
+
             }
         }
     }
